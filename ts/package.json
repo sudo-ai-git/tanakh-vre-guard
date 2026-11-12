@@ -1,0 +1,49 @@
+{
+  "name": "@near/tanakh-vre-guard",
+  "version": "1.0.0",
+  "description": "Shared verification library for NEAR hackathon projects: 231-gate checksums, SemanticSpace, CausalMemory, DualStreamGematria, BijectiveVerifier",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && tsc -m ESNext --outDir dist/esm",
+    "build:watch": "tsc -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "near",
+    "verification",
+    "gematria",
+    "tanakh",
+    "231-gate",
+    "vre",
+    "agent",
+    "cryptography"
+  ],
+  "author": "NEAR Hackathon 2026",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.9.3",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

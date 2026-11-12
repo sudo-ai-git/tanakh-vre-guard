@@ -1,0 +1,26 @@
+[package]
+name = "tanakh-vre-guard"
+version = "1.0.0"
+edition = "2021"
+description = "231-gate three-channel checksum for NEAR smart contracts (SUM/LINEAR/PRODUCT mod 231)"
+license = "MIT"
+repository = "https://github.com/sudo-ai-git/tanakh-vre-guard"
+categories = ["cryptography", "wasm", "no-std"]
+keywords = ["near", "checksum", "gematria", "231-gate", "tamper-evidence"]
+
+[dependencies]
+# No external dependencies - pure Rust, no_std compatible
+heapless = "0.8"
+
+[dev-dependencies]
+criterion = "0.5"
+
+[features]
+default = []
+std = []
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"

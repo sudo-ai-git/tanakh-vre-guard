@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+target/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.env
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+.eggs/
+*.wasm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Local config
+*.local.*
+local.*
+
+# Secrets
+*.key
+*.pem
+.env.local
